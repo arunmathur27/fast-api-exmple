@@ -15,7 +15,7 @@ def root():
     
 
 @app.post("/upload/")
-async def create_upload_file(file: UploadFile = File(...)):
+async def create_upload_file(file: UploadFile):
     file_name = os.getcwd() + "/images/" + file.filename.replace(" ", "-")
     #filename = 'Arunmathur'
     #file.filename = f"{filename}.jpg"
