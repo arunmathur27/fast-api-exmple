@@ -9,6 +9,11 @@ IMAGEDIR = "images/"
 
 app = FastAPI()
 
+# Root route
+@app.get("/")
+def root():
+    return {"message": "Welcome to the FastAPI root route!"}
+    
 
 @app.post("/upload/")
 async def create_upload_file(file: UploadFile = File(...)):
