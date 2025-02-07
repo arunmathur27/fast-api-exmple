@@ -27,13 +27,3 @@ async def create_upload_file(file: UploadFile):
 
     return {"filename": file.filename}
 
-
-@app.get("/show/")
-async def read_random_file(file_id):
-    # get random file from the image directory
-    files = os.listdir(IMAGEDIR)
-    random_index = file_id
-
-    path = f"{IMAGEDIR}{files[random_index]}"
-
-    return FileResponse(path)
