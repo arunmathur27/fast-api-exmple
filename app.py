@@ -4,7 +4,6 @@ from fastapi.responses import FileResponse
 import os
 
 
-
 IMAGEDIR = "images/"
 
 app = FastAPI()
