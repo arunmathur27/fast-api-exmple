@@ -28,7 +28,7 @@ def init_app():
                 f.write(contents)
         except Exception as e:
             print(e)
-            raise HTTPException(status_code=500, detail='Something went wrong')
+            raise HTTPException(status_code=500, detail=f'Something went wrong. Error:{e}')
         finally:
             file.file.close()
 
