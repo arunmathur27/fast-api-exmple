@@ -4,7 +4,6 @@ from fastapi.responses import FileResponse
 import os
 import uvicorn
 
-
 def init_app():
     app = FastAPI(
          title='Test FastAPI',
