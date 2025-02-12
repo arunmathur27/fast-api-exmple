@@ -26,7 +26,8 @@ def init_app():
             # save the file
             with open(file_name,'wb+') as f:
                 f.write(contents)
-        except Exception:
+        except Exception as e:
+            print(e)
             raise HTTPException(status_code=500, detail='Something went wrong')
         finally:
             file.file.close()
